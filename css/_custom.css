@@ -1,0 +1,361 @@
+/* Map Container Styles */
+.map-container {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  min-height: 300px;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 4px;
+}
+
+/* Contact Section Styles */
+.bg-white {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.contact-info {
+  margin-top: auto;
+}
+
+.contact-info p {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.contact-info i {
+  min-width: 20px;
+  text-align: center;
+}
+
+/* People Says Section */
+#section-peoplesays {
+  padding: 5rem 0;
+  background-color: #f8f9fa;
+  position: relative;
+}
+
+#section-peoplesays .heading {
+  color: #000;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+#section-peoplesays .lead {
+  color: #6c757d;
+  font-size: 1.25rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+/* Carousel Navigation */
+.owl-carousel {
+  position: relative;
+}
+
+/* Hide default navigation */
+.owl-nav {
+  display: none !important;
+}
+
+.custom-carousel-nav {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+  z-index: 10;
+  padding: 0 15px;
+}
+
+.carousel-nav-btn {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-radius: 50% !important;
+  border: 1px solid #e0e0e0 !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  color: #333 !important;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  pointer-events: auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.carousel-nav-btn:hover {
+  background: #fff !important;
+  color: #000 !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
+}
+
+.carousel-prev {
+  margin-left: 0;
+}
+
+.carousel-next {
+  margin-right: 0;
+}
+
+/* Adjust position for mobile */
+@media (max-width: 767.98px) {
+  .carousel-nav-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+  
+  .carousel-prev {
+    margin-left: -5px;
+  }
+  
+  .carousel-next {
+    margin-right: -5px;
+  }
+}
+
+.testimonial {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  margin: 1rem;
+  height: 100%;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+  position: relative;
+}
+
+.testimonial:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial .author-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 1.5rem;
+  border: 3px solid #f8f9fa;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial .author-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial blockquote {
+  position: relative;
+  padding: 0 1rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial blockquote p {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.testimonial blockquote footer {
+  font-weight: 600;
+  color: #333;
+  margin-top: auto;
+}
+
+.testimonial blockquote p {
+  font-style: italic;
+  color: #555;
+  line-height: 1.8;
+  margin: 0 0 1.5rem 0;
+  flex-grow: 1;
+}
+
+/* Instant scrolling */
+html {
+  scroll-behavior: auto;
+  scroll-padding-top: 100px; /* Space for fixed navbar */
+}
+
+/* Ensure content doesn't get hidden behind fixed navbar */
+section {
+  scroll-margin-top: 100px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+  #section-peoplesays .heading {
+    font-size: 2rem;
+  }
+  
+  #section-peoplesays .lead {
+    font-size: 1.1rem;
+  }
+  
+  .testimonial {
+    padding: 1.5rem;
+    min-height: auto;
+  }
+  
+  .owl-nav {
+    position: static;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+}
+
+.testimonial p em {
+  color: #dc3545;
+  font-style: normal;
+  font-weight: 600;
+  display: block;
+  margin-top: auto;
+  font-size: 1rem;
+  position: relative;
+  padding-top: 1.5rem;
+  margin-bottom: 0;
+}
+
+testimonial p em::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background: #dc3545;
+}
+
+/* Carousel Navigation */
+.js-carousel-2.owl-carousel {
+  position: relative;
+}
+
+.owl-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.owl-nav button {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #fff !important;
+  border: 2px solid #000 !important;
+  border-radius: 50%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;
+  transition: all 0.3s ease;
+  pointer-events: auto;
+}
+
+.owl-nav button.owl-prev {
+  left: -70px;
+}
+
+.owl-nav button.owl-next {
+  right: -70px;
+}
+
+.owl-nav button span {
+  display: none;
+}
+
+.owl-nav button::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url('../images/arrow.jpg') no-repeat center center;
+  background-size: contain;
+  transition: all 0.3s ease;
+}
+
+.owl-prev::before {
+  transform: rotate(180deg);
+}
+
+.owl-next::before {
+  transform: rotate(0);
+}
+
+.owl-nav button:hover,
+.owl-nav button:focus {
+  background: #dc3545 !important;
+  border-color: #dc3545 !important;
+  outline: none;
+}
+
+.owl-nav button:hover::before,
+.owl-nav button:focus::before {
+  filter: brightness(0) invert(1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1199.98px) {
+  .owl-nav button.owl-prev {
+    left: 10px;
+  }
+  
+  .owl-nav button.owl-next {
+    right: 10px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #section-peoplesays {
+    padding: 3rem 0;
+  }
+  
+  .testimonial {
+    padding: 1.5rem;
+    margin: 0.5rem;
+    min-height: 280px;
+  }
+  
+  .map-container {
+    margin-bottom: 1rem;
+  }
+  
+  .bg-white {
+    padding: 1rem;
+  }
+}
