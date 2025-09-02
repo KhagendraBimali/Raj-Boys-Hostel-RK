@@ -1,0 +1,290 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Blog Post - Raj Boys Hostel RK</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Read our latest blog post about student life and tips in Kathmandu">
+    <meta name="keywords" content="student hostel, Kathmandu, Nepal, blog, student life, tips">
+    
+    <!-- Favicon -->
+    <link href="images/logo1.jpg" rel="icon">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/_custom.css">
+    <link rel="stylesheet" href="css/_navbar-fix.css">
+    <link rel="stylesheet" href="css/mobile-menu.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Roboto:300,400,500,700" rel="stylesheet">
+    
+    <!-- Modernizr JS for IE8 support of HTML5 elements and media queries -->
+    <script src="js/modernizr-3.5.0.min.js"></script>
+  </head>
+  <body data-spy="scroll" data-target="#templateux-navbar" data-offset="200">
+    
+    <nav class="navbar navbar-expand-lg navbar-dark pb_navbar pb_scrolled-light" id="templateux-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><span class="rajboys-text">RajBoys</span><span class="hostelrk-text">HostelRK</span></a>
+        <div class="site-menu-toggle js-site-menu-toggle  ml-auto"  data-aos="fade" data-toggle="collapse" data-target="#templateux-navbar-nav" aria-controls="templateux-navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <!-- END menu-toggle -->
+
+        <div class="collapse navbar-collapse" id="templateux-navbar-nav">
+          <ul class="navbar-nav ml-auto align-items-center">
+            <li class="nav-item"><a class="nav-link" href="index.html#section-home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#section-about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#section-team">Teams</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#section-rooms">Rooms</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#section-menus">Food Routine</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#section-whychooseus">Why choose Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#section-peoplesays">Reviews</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#section-contact">Contact Us</a></li>
+            <li class="nav-item ml-3"><a href="#" class="btn btn-primary px-4" data-toggle="modal" data-target="#reservation-form">Reserve Now</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- Blog Post Content -->
+    <section class="section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <article class="blog-post">
+              <h1 class="mb-4" id="blog-title">Blog Post Title</h1>
+              
+              <div class="mb-4">
+                <span class="text-muted" id="blog-date">September 2, 2025</span>
+                <span class="mx-2">•</span>
+                <span class="text-muted" id="blog-category">Student Life</span>
+              </div>
+              
+              <div class="mb-5">
+                <img src="" alt="" class="img-fluid rounded" id="blog-image">
+              </div>
+              
+              <div class="blog-content" id="blog-content">
+                <!-- Blog content will be inserted here by JavaScript -->
+              </div>
+              
+              <div class="mt-5">
+                <a href="blog.html" class="btn btn-primary">← Back to Blog</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Footer (copied from index.html) -->
+    <footer class="pb_footer bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <p class="pb_font-14">© 2025 Raj Boys Hostel RK. All Rights Reserved.</p>
+            <p class="footer-links">
+              <a href="privacy.html">Privacy Policy</a> | 
+              <a href="terms.html">Terms & Conditions</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <!-- JavaScripts -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/navbar-scroll.js"></script>
+    <script>
+      // Mobile menu toggle
+      $('.js-site-menu-toggle').click(function(e) {
+        $(this).toggleClass('active');
+        $('.navbar-collapse').toggleClass('show');
+      });
+
+      // Close mobile menu when clicking a nav link
+      $('.navbar-nav>li>a').on('click', function(){
+        $('.navbar-collapse').removeClass('show');
+        $('.js-site-menu-toggle').removeClass('active');
+      });
+
+      // Initialize AOS
+      AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out',
+        once: true
+      });
+    </script>
+    <script src="js/main.js"></script>
+    
+    <!-- Navbar Script -->
+    <script>
+      $(window).on('scroll', function() {
+        if ($(window).scrollTop() > 10) {
+          $('.pb_navbar').addClass('pb_scrolled');
+        } else {
+          $('.pb_navbar').removeClass('pb_scrolled');
+        }
+      });
+      
+      // Close mobile menu when clicking a nav link
+      $('.navbar-nav>li>a').on('click', function(){
+        $('.navbar-collapse').collapse('hide');
+      });
+    </script>
+    
+    <script>
+      // This script will handle loading the correct blog post content
+      document.addEventListener('DOMContentLoaded', function() {
+        // Get the blog post ID from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const postId = urlParams.get('id') || '1'; // Default to first post if no ID specified
+        
+        // Blog post data (in a real app, this would come from a database)
+        const blogPosts = {
+          '1': {
+            title: '10 Tips for Students Living in Kathmandu',
+            date: 'September 2, 2025',
+            category: 'Student Life',
+            image: 'images/slider-2.jpg',
+            content: `
+              <p>Moving to a new city for studies can be both exciting and challenging. Here are 10 essential tips to help you settle into student life in Kathmandu:</p>
+              
+              <h3>1. Learn Basic Nepali Phrases</h3>
+              <p>While many people speak English in Kathmandu, learning basic Nepali phrases will help you navigate the city and connect with locals. Start with greetings like "Namaste" (Hello) and "Dhanyabad" (Thank you).</p>
+              
+              <h3>2. Understand the Transportation System</h3>
+              <p>Familiarize yourself with local transportation options like micro-buses, tempos, and taxis. Consider getting a local SIM card with mobile data to use ride-hailing apps like Pathao and Tootle for convenient travel.</p>
+              
+              <h3>3. Stay Safe</h3>
+              <p>While Kathmandu is generally safe, always be aware of your surroundings, especially at night. Keep your belongings secure and avoid walking alone in poorly lit areas.</p>
+              
+              <h3>4. Try Local Cuisine</h3>
+              <p>Don't miss out on delicious Nepali dishes like momo, dal bhat, and Newari cuisine. Eating local is not only tasty but also budget-friendly.</p>
+              
+              <h3>5. Manage Your Budget</h3>
+              <p>Create a monthly budget for expenses like food, transportation, and entertainment. Take advantage of student discounts where available.</p>
+              
+              <h3>6. Stay Connected</h3>
+              <p>Get a local SIM card from Ncell or NTC for affordable data and call rates. Having mobile data will be essential for navigation and staying in touch.</p>
+              
+              <h3>7. Explore the City</h3>
+              <p>Take time to visit cultural sites like Swayambhunath, Boudhanath, and Durbar Square. Understanding the local culture will enrich your experience.</p>
+              
+              <h3>8. Make Local Friends</h3>
+              <p>Building friendships with local students can help you learn more about the culture and discover hidden gems in the city.</p>
+              
+              <h3>9. Stay Healthy</h3>
+              <p>Drink only bottled or filtered water, be cautious with street food at first, and make sure to get any recommended vaccinations before arriving.</p>
+              
+              <h3>10. Be Patient and Open-Minded</h3>
+              <p>Cultural differences and language barriers can be challenging, but maintaining a positive attitude and sense of humor will help you adapt and enjoy your time in Kathmandu.</p>
+              
+              <p>Remember, adjusting to a new city takes time. Be patient with yourself and don't hesitate to ask for help when needed. The staff at Raj Boys Hostel RK are always here to support you during your stay in Kathmandu!</p>
+            `
+          },
+          '2': {
+            title: 'Student Budgeting Guide for Kathmandu',
+            date: 'August 25, 2025',
+            category: 'Money Saving',
+            image: 'images/slider-4.jpg',
+            content: `
+              <p>Living on a student budget in Kathmandu is manageable with the right approach. Here's how to make the most of your money while enjoying all that the city has to offer.</p>
+              
+              <h3>1. Set a Monthly Budget</h3>
+              <p>Track your income and expenses. Allocate funds for essentials like food, transportation, and study materials before spending on entertainment.</p>
+              
+              <h3>2. Affordable Eats</h3>
+              <p>Local eateries (bhojanalayas) offer delicious and affordable meals. A typical dal bhat thali costs between NPR 200-300 and is both filling and nutritious.</p>
+              
+              <h3>3. Use Public Transportation</h3>
+              <p>Microbuses and tempos are the most economical way to get around. A typical ride costs between NPR 20-50 depending on distance.</p>
+              
+              <h3>4. Student Discounts</h3>
+              <p>Always carry your student ID. Many museums, cultural sites, and even some restaurants offer student discounts.</p>
+              
+              <h3>5. Shop Smart</h3>
+              <p>Visit local markets like Asan and New Road for better prices than shopping malls. Don't forget to bargain at local shops.</p>
+              
+              <h3>6. Free Activities</h3>
+              <p>Take advantage of free cultural events, temple visits, and hiking in the surrounding hills for entertainment.</p>
+              
+              <h3>7. Share Expenses</h3>
+              <p>Share costs with roommates for items like cooking ingredients, cleaning supplies, and utilities.</p>
+              
+              <p>With these tips, you can enjoy your time in Kathmandu without breaking the bank!</p>
+            `
+          },
+          '3': {
+            title: 'Best Study Spots in Baneshwor',
+            date: 'August 18, 2025',
+            category: 'Study Tips',
+            image: 'images/hero_2.jpg',
+            content: `
+              <p>Finding the perfect study spot can make all the difference in your academic success. Here are some of the best places to study in Baneshwor:</p>
+              
+              <h3>1. Nepal National Library</h3>
+              <p>Located in Pulchowk, this quiet library offers a peaceful environment with plenty of study space and resources. Open 10 AM to 5 PM, Sunday-Friday.</p>
+              
+              <h3>2. Himalayan Java Coffee - Baneshwor</h3>
+              <p>This popular coffee chain offers good WiFi, comfortable seating, and quality coffee. The background music is kept at a study-friendly volume.</p>
+              
+              <h3>3. The Bookworm</h3>
+              <p>Part bookstore, part café, The Bookworm offers a cozy atmosphere perfect for studying, with the added benefit of being surrounded by books.</p>
+              
+              <h3>4. Your Hostel Common Room</h3>
+              <p>Don't overlook the study spaces at Raj Boys Hostel RK. Our common areas are designed with students in mind, offering quiet spaces to focus.</p>
+              
+              <h3>5. American Corner - U.S. Embassy</h3>
+              <p>Open to the public, this space offers free WiFi, air conditioning, and a quiet environment. You'll need to show ID to enter.</p>
+              
+              <h3>6. Boudhanath Stupa Area</h3>
+              <p>Several rooftop cafés around Boudhanath offer peaceful environments with beautiful views, perfect for reading and studying.</p>
+              
+              <h3>7. Your Room at Raj Boys Hostel RK</h3>
+              <p>With comfortable study desks and reliable WiFi, your room can be an excellent place to focus, especially during late-night study sessions.</p>
+              
+              <p>Remember to take regular breaks, stay hydrated, and find what study environment works best for you. Happy studying!</p>
+            `
+          }
+        };
+        
+        // Get the current post data
+        const post = blogPosts[postId] || blogPosts['1'];
+        
+        // Update the page with the post data
+        document.getElementById('blog-title').textContent = post.title;
+        document.getElementById('blog-date').textContent = post.date;
+        document.getElementById('blog-category').textContent = post.category;
+        document.getElementById('blog-image').src = post.image;
+        document.getElementById('blog-image').alt = post.title;
+        document.getElementById('blog-content').innerHTML = post.content;
+        
+        // Update the page title
+        document.title = `${post.title} | Raj Boys Hostel RK Blog`;
+        
+        // Update meta description for SEO
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+          metaDescription.content = post.content.substring(0, 160) + '...';
+        }
+      });
+    </script>
+  </body>
+</html>

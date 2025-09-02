@@ -1,0 +1,136 @@
+/* Modal Fixes */
+.modal-backdrop.show {
+  opacity: 0.8 !important;
+  z-index: 1040 !important;
+}
+
+#reservation-form {
+  z-index: 1060 !important;
+  padding-right: 0 !important;
+}
+
+#reservation-form .modal-dialog {
+  z-index: 1061 !important;
+  margin: 1.75rem auto;
+}
+
+#reservation-form .modal-content {
+  position: relative;
+  overflow: visible;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  margin-top: 50px;
+}
+
+/* Close Button */
+#reservation-form .modal-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  padding: 0;
+  z-index: 1;
+}
+
+#reservation-form .close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  z-index: 9999;
+  font-size: 2rem;
+  line-height: 1;
+  color: #000;
+  opacity: 0.7;
+  background: rgba(255, 255, 255, 0.9);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#reservation-form .close:hover {
+  opacity: 1;
+  color: #ff0000;
+  transform: rotate(90deg);
+  background: #fff;
+}
+
+#reservation-form .close span {
+  position: relative;
+  top: -1px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  #reservation-form .modal-dialog {
+    margin: 0.5rem;
+  }
+  
+  #reservation-form .modal-content {
+    margin-top: 30px;
+  }
+  
+  #reservation-form .close {
+    right: 10px;
+    top: 10px;
+    width: 32px;
+    height: 32px;
+    font-size: 1.75rem;
+  }
+}
+
+#reservation-form .modal-header {
+  position: relative;
+  min-height: 1px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  z-index: 1;
+}
+
+#reservation-form .close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  z-index: 9999;
+  font-size: 2rem;
+  line-height: 1;
+  color: #000;
+  opacity: 0.7;
+  padding: 0.5rem;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#reservation-form .close:hover {
+  opacity: 1;
+  color: #ff0000;
+  transform: rotate(90deg);
+  background: #fff;
+}
+
+#reservation-form .close span {
+  position: relative;
+  top: -1px;
+}
+
+#reservation-form .modal-body {
+  padding-top: 1.5rem;
+}

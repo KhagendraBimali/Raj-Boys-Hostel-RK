@@ -1,17 +1,29 @@
 (function($) {
   'use strict';
 
-  // Mobile menu toggle
-  $('.site-menu-toggle').click(function(){
+  // Mobile menu toggle - simplified to only handle the mobile menu
+  $('.site-menu-toggle').click(function(e){
+    e.preventDefault();
+    e.stopPropagation();
     var $this = $(this);
+    $this.toggleClass('active');
+    $('.mobile-menu').toggleClass('active');
+    $('body').toggleClass('menu-open');
+    
+    // Toggle body scroll lock
     if ($('body').hasClass('menu-open')) {
-      $this.removeClass('open');
-      $('.js-site-navbar').fadeOut(400);
-      $('body').removeClass('menu-open');
+      $('body').css('overflow', 'hidden');
     } else {
-      $this.addClass('open');
-      $('.js-site-navbar').fadeIn(400);
-      $('body').addClass('menu-open');
+      $('body').css('overflow', '');
+    }
+  });
+  
+  // Close menu when clicking outside
+  $(document).on('click', function(e) {
+    if (!$(e.target).closest('.navbar, .site-menu-toggle').length) {
+      $('.site-menu-toggle').removeClass('active');
+      $('.mobile-menu').removeClass('active');
+      $('body').removeClass('menu-open').css('overflow', '');
     }
   });
 
@@ -107,12 +119,22 @@
     });
   }
 
-  // Window scroll
+  // Window scroll - Keep navbar fixed at the top
   $(window).scroll(function() {
+    // Always ensure navbar stays fixed
+    $('.navbar').css({
+      'position': 'fixed',
+      'top': '0',
+      'left': '0',
+      'right': '0',
+      'z-index': '1030'
+    });
+    
+    // Add scrolled class for styling if needed
     if ($(this).scrollTop() > 100) {
-      $('.js-site-header').addClass('scrolled');
+      $('.js-site-header, .navbar').addClass('scrolled');
     } else {
-      $('.js-site-header').removeClass('scrolled');
+      $('.js-site-header, .navbar').removeClass('scrolled');
     }
   });
 
